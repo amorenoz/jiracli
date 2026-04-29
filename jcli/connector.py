@@ -232,7 +232,7 @@ class JiraConnector(object):
         elif auth_type == 'cookie_harvest':
             cookies = get_browser_cookies(self.config['jira']['server'])
             if not cookies:
-                raise ValueError("ERROR: No browser cookies detected (or browser_cookies3 not installed).")
+                raise ValueError("ERROR: No browser cookies detected (or browser-cookie3 not installed).")
             self.jira = JIRA(server=self.config['jira']['server'],
                              options={"cookies": cookies})
         else:
